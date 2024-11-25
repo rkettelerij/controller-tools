@@ -6757,6 +6757,15 @@ spec:
                 - message: must have even length
                   rule: self.size() % 2 == 0
                 - rule: "true"
+              structWithAnonymousStruct:
+                description: A struct with an anonymous struct as a field.
+                type: object
+                properties:
+                  anonymous:
+                    type: object
+                    properties: {}
+                required:
+                  - anonymous
               structWithSeveralFields:
                 description: A struct that can only be entirely replaced
                 properties:
@@ -6839,6 +6848,7 @@ spec:
             - nestedassociativeList
             - patternObject
             - schedule
+            - structWithAnonymousStruct
             - structWithSeveralFields
             - twoOfAKindPart0
             - twoOfAKindPart1
